@@ -65,3 +65,7 @@ function main(){
 }
 
 main();
+
+module.export = {
+  initializeArray
+}

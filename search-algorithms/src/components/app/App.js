@@ -11,6 +11,7 @@ export default class App extends React.Component{
       size: 0, 
       number: 0,
       array: [],
+      range: 0,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +19,7 @@ export default class App extends React.Component{
   handleSizeChange(value) {
     this.setState({
       size: value,
-      array: initializeArray(value)
+      array: initializeArray(value, 1000)
     })
   }
 
@@ -42,7 +43,7 @@ export default class App extends React.Component{
           </label>
           <label>
             Number to Search For:
-            <input type="number" value={this.state.number} onChange= {e => this.handleNumberChange(e.target.value) }/>
+            <input type="number" value={this.state.number} onChange={e => this.handleNumberChange(e.target.value)} />
           </label>
           <input type="submit" value="Submit" />
         </form>
